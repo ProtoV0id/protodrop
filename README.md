@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/protodropbanner.png" alt="ProtoDrop Banner" width="100%">
+</p>
+
 # ProtoDrop
 
 ````bash
