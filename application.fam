@@ -1,0 +1,59 @@
+# application.fam
+#
+# This file is the Flipper app manifest.
+# Think of it like the "project description" for the Flipper build system.
+#
+# uFBT/FBT reads this file to learn:
+# - what the app is called
+# - what C function starts the app
+# - what services the app needs
+# - where the compiled .fap file should appear
+#
+# Official Flipper docs describe application.fam as the manifest that defines
+# a component’s basic properties and dependencies.
+
+App(
+    # appid is the internal ID used by the build system.
+    # Keep it lowercase, simple, and unique.
+    appid="protodrop",
+
+    # name is what the user will see on the Flipper menu.
+    name="ProtoDrop",
+
+    # EXTERNAL means this builds as a .fap application.
+    # That is what we want for an app installed on the SD card.
+    apptype=FlipperAppType.EXTERNAL,
+
+    # entry_point is the C function that starts your app.
+    # Later, protodrop.c must contain:
+    #
+    # int32_t protodrop_app(void* p) {
+    #     ...
+    # }
+    entry_point="protodrop_app",
+
+    # cdefines lets us define a C preprocessor symbol for this app.
+    # This is optional, but useful later if we need app-specific compile logic.
+    cdefines=["APP_PROTODROP"],
+
+    # requires lists Flipper system services this app needs.
+    #
+    # gui   = screen/UI drawing support
+    # input = button input support
+    #
+    # UART/serial code is accessed through Flipper APIs in the C file.
+    requires=["gui"],
+
+    # stack_size controls how much stack memory the app gets.
+    # 2 KB is enough for a minimal menu app.
+    # We can raise this later if UART buffers/UI logic need more.
+    stack_size=2 * 1024,
+
+    # fap_category controls where the app appears on the Flipper.
+    # This will install under:
+    # Applications -> GPIO
+    fap_category="GPIO",
+    
+    # image
+    fap_icon="protodrop_icon_10px.png",
+)
