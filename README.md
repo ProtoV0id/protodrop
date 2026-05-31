@@ -1,9 +1,10 @@
 <p align="center">
-  <img src="assets/protodropbanner.png" alt="ProtoDrop Banner" width="100%">
+  <img src="assets/protodrop-banner.png" alt="ProtoDrop Banner" width="100%">
 </p>
 
 # ProtoDrop
-
+Wireless Messaging for Flipper Zero 
+Phone / Browser ⇄ ESP32 ⇄ UART ⇄ Flipper Zero
 ````bash
 $ protodrop --status
 
@@ -55,9 +56,9 @@ Waiting for messages...
 | UART Communication    | ESP32 sends messages to Flipper over UART     | ✅ Working      |
 | Flipper Inbox         | Messages are displayed inside the Flipper app | ✅ Working      |
 | Local Message Storage | Messages can be saved and reviewed later      | ✅ Working      |
+| Message Management    | Read, delete, and wipe stored messages        | ✅ Working      |
 | New Message Alert     | Flipper can notify when a message is received | 🚧 Planned     |
 | Vibration Feedback    | One short vibration on new message            | 🚧 Planned     |
-| Message Management    | Read, delete, and wipe stored messages        | 🚧 In Progress |
 | Polished UI           | Cleaner Flipper interface and menu flow       | 🚧 In Progress |
 | File Transfer         | Ability to transfer files to Flipper Zero     | 🔮 Future      |
 | Encryption            | Optional secure message handling              | 🔮 Future      |
