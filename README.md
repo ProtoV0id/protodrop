@@ -45,8 +45,23 @@ Waiting for messages...
 └──────────────┘
 ```
 
----
+## Release Status
 
+```bash
+$ protodrop --release-status
+
+Version: v1.0
+Progress: 40%
+
+[████████░░░░░░░░░░░░]
+
+Current Focus:
+- UI redesign
+- Message notifications
+- Vibration alerts
+
+First Package Release: Message Alert = Complete
+````
 ## Features
 
 | Feature               | Description                                   | Status         |
@@ -62,6 +77,7 @@ Waiting for messages...
 | Polished UI           | Cleaner Flipper interface and menu flow       | 🚧 In Progress |
 | File Transfer         | Ability to transfer files to Flipper Zero     | 🔮 Future      |
 | Encryption            | Optional secure message handling              | 🔮 Future      |
+
 
 ---
 
